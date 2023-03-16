@@ -30,15 +30,15 @@ int main() {
     double func_time[3] = {0.f, 0.f, 0.f};
 
     start = wtime();
-    countingSort(counting_arr, n);
+    counting_sort(counting_arr, n, max_rand);
     func_time[0] = wtime() - start;
 
     start = wtime();
-    bubbleSort(bubble_arr, 0, n - 1);
+    bubble_sort(bubble_arr, n);
     func_time[1] = wtime() - start;
 
     start = wtime();
-    mergeSort(merge_arr, n);
+    merge_sort(merge_arr, 0, n - 1);
     func_time[2] = wtime() - start;
     if (PrintArrays) {
       printf("\nCountingSort\tBubbleSort\tMergeSort: \n");
