@@ -17,7 +17,7 @@ double wtime()
 }
 
 //counting sort
-void counting_sort(int arr[], int n, int max_val) 
+void counting_sort(uint32_t arr[], int n, int max_val) 
 {
     int count[max_val+1];
     for(int i = 0; i < max_val+1; i++) {
@@ -48,7 +48,7 @@ void counting_sort(int arr[], int n, int max_val)
 }
 
 //bubble sort
-void bubble_sort(int arr[], int n) 
+void bubble_sort(uint32_t arr[], int n) 
 {
     for(int i = 0; i < n-1; i++) {
         for(int j = 0; j < n-i-1; j++) {
@@ -64,7 +64,7 @@ void bubble_sort(int arr[], int n)
 
 //merge sort
 // Слияние двух отсортированных подмассивов в один отсортированный подмассив
-void merge(int arr[], int left, int middle, int right) {
+void merge(uint32_t arr[], int left, int middle, int right) {
     int n1 = middle - left + 1; // Длина первого подмассива
     int n2 = right - middle; // Длина второго подмассива
     int L[n1], R[n2]; // Создаем временные массивы для хранения подмассивов
@@ -110,7 +110,7 @@ void merge(int arr[], int left, int middle, int right) {
 }
 
 // Функция рекурсивной сортировки Merge Sort
-void merge_sort(int arr[], int left, int right) {
+void merge_sort(uint32_t arr[], int left, int right) {
     if(left < right) {
         int middle = left + (right - left)/2; // Находим середину массива
         merge_sort(arr, left, middle); // Рекурсивно сортируем левый подмассив
